@@ -1,15 +1,25 @@
+TARGET = transport
+EXENAME = transport
+
 CC = gcc
 CFLAGS = -Wall -Wextra
 DEPS = init.h server.h segment.h
-OBJ = transport.o
+OBJS = $(TARGET).o
+
+all: $(TARGET)
+
+install: $(TARGET) clean
+
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $(EXENAME) $^
 
 %.o: %.c $(DEPS)
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-transport: $(OBJ)
-	gcc $(CFLAGS) -o $@ $^
-
 clean:
-	rm -f *.o
-distclean:
-	rm -f *.o transport
+	rm -rf *.o
+distclean: clean
+	rm -f $(EXENAME)
+
+.PHONY: clean
+
