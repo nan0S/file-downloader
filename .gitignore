@@ -1,3 +1,10 @@
+# Custom
+init-network
+tags
+test-fast
+test-slow
+hubert_obrzut.tar.xz
+
 # Prerequisites
 *.d
 
