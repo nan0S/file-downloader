@@ -1,0 +1,8 @@
+#!/bin/sh
+
+DEV=enp0s8
+IP=$1
+
+sudo ip addr flush dev $DEV
+sudo ip link set up dev $DEV
+sudo ip addr add $IP dev $DEV

@@ -1,0 +1,53 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+%.o	Makefile	/^%.o: %.c $(DEPS)$/;"	t
+BUFFER_SIZE	init.h	/^#define BUFFER_SIZE /;"	d
+CC	Makefile	/^CC = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -Wall -Wextra$/;"	m
+DEPS	Makefile	/^DEPS = init.h server.h segment.h$/;"	m
+INIT	init.h	/^#define INIT$/;"	d
+MAX_SWS	segment.h	/^#define MAX_SWS /;"	d
+OBJ	Makefile	/^OBJ = transport.o$/;"	m
+PACKET_SIZE	init.h	/^#define PACKET_SIZE /;"	d
+RETRY_TIME	segment.h	/^const double RETRY_TIME = 0.04;$/;"	v	typeref:typename:const double
+add_new_segment	segment.h	/^int add_new_segment(char* data, int lar)$/;"	f	typeref:typename:int
+advance_frame	transport.c	/^void advance_frame(int sockfd)$/;"	f	typeref:typename:void
+clean	Makefile	/^clean:$/;"	t
+data	segment.h	/^    char data[PACKET_SIZE];$/;"	m	struct:segment	typeref:typename:char[]
+distclean	Makefile	/^distclean:$/;"	t
+download_file	transport.c	/^void download_file(int sockfd)$/;"	f	typeref:typename:void
+format_error	init.h	/^void format_error(char* msg)$/;"	f	typeref:typename:void
+get_offset	segment.h	/^int get_offset(int packet_idx)$/;"	f	typeref:typename:int
+get_packet_size	server.h	/^int get_packet_size(int i)$/;"	f	typeref:typename:int
+ip	init.h	/^uint32_t ip;$/;"	v	typeref:typename:uint32_t
+lar	transport.c	/^int lar, lars, sws;$/;"	v	typeref:typename:int
+lars	transport.c	/^int lar, lars, sws;$/;"	v	typeref:typename:int
+last_time	segment.h	/^    struct timespec last_time;$/;"	m	struct:segment	typeref:struct:timespec
+main	transport.c	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
+output	init.h	/^FILE* output;$/;"	v	typeref:typename:FILE *
+output_to_file	transport.c	/^void output_to_file(char* data)$/;"	f	typeref:typename:void
+parse_args	init.h	/^void parse_args(int argc, char* argv[])$/;"	f	typeref:typename:void
+port	init.h	/^uint16_t port;$/;"	v	typeref:typename:uint16_t
+receive_packet	server.h	/^int receive_packet(int sockfd, char** it)$/;"	f	typeref:typename:int
+receive_packets	transport.c	/^void receive_packets(int sockfd)$/;"	f	typeref:typename:void
+received	segment.h	/^    int received;$/;"	m	struct:segment	typeref:typename:int
+recv_frame	segment.h	/^int recv_frame = 0;$/;"	v	typeref:typename:int
+recv_len	segment.h	/^int recv_len = 0;$/;"	v	typeref:typename:int
+request	transport.c	/^void request(int sockfd, int i, int times)$/;"	f	typeref:typename:void
+retry_requests	transport.c	/^void retry_requests(int sockfd, int force)$/;"	f	typeref:typename:void
+segment	segment.h	/^struct segment$/;"	s
+segments	segment.h	/^} segments[MAX_SWS];$/;"	v	typeref:struct:segment[]
+send_request	server.h	/^void send_request(int sockfd, int i)$/;"	f	typeref:typename:void
+setup_server	server.h	/^int setup_server()$/;"	f	typeref:typename:int
+should_retry	segment.h	/^int should_retry(struct segment* seg)$/;"	f	typeref:typename:int
+sws	transport.c	/^int lar, lars, sws;$/;"	v	typeref:typename:int
+szero	segment.h	/^void szero(struct segment* seg)$/;"	f	typeref:typename:void
+total_download	init.h	/^int total_download;$/;"	v	typeref:typename:int
+total_packet_cnt	transport.c	/^int total_packet_cnt;$/;"	v	typeref:typename:int
+transport	Makefile	/^transport: $(OBJ)$/;"	t

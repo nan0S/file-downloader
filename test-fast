@@ -1,0 +1,17 @@
+#!/bin/sh
+
+IP=$1
+PORT="33333"
+BYTES=$2
+
+#./transport-server $PORT &
+#SERVER=$!
+#trap "kill $SERVER" EXIT
+
+make &> /dev/null
+echo my program:
+time ./transport $IP $PORT test-output $BYTES &> /dev/null
+echo -e "\n"fast client:
+time ./transport-client-fast $IP $PORT good-output $BYTES &> /dev/null
+
+diff -bwq test-output good-output || echo ZLE!
