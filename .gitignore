@@ -4,6 +4,8 @@ tags
 test-fast
 test-slow
 hubert_obrzut.tar.xz
+transport-client-slow
+transport-client-fast
 
 # Prerequisites
 *.d
